@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CorewoodUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h1>About Corewood University</h1>
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>Contact Us</h2>
+
+<p>
+    <strong>Name:</strong> Kylar Sorensen
+    <br />
+    <strong>Phone:</strong> (541) 561-7270
+    <br />
+    <strong>Email:</strong> kylar_s@byui.edu
+</p>
