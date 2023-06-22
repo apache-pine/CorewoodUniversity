@@ -50,7 +50,7 @@ namespace CorewoodUniversity.Controllers
         // GET: Departments/Create
         public IActionResult Create()
         {
-            ViewData["InstructorID"] = new SelectList(_context.Instructors, "InstructorID", "FullName");
+            ViewData["InstructorID"] = new SelectList(_context.Instructors, "ID", "FullName");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace CorewoodUniversity.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["InstructorID"] = new SelectList(_context.Instructors, "InstructorID", "FullName", department.InstructorID);
+            ViewData["InstructorID"] = new SelectList(_context.Instructors, "ID", "FullName", department.InstructorID);
             return View(department);
         }
 

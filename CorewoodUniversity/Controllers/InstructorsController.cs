@@ -64,7 +64,11 @@ namespace CorewoodUniversity.Controllers
             }
 
             var instructor = await _context.Instructors
+                .Include(i => i.OfficeAssignment)
+                .Include(i => i.CourseAssignments)
+                    .ThenInclude(ca => ca.Course)
                 .FirstOrDefaultAsync(m => m.ID == id);
+
             if (instructor == null)
             {
                 return NotFound();
@@ -72,6 +76,7 @@ namespace CorewoodUniversity.Controllers
 
             return View(instructor);
         }
+
 
         // GET: Instructors/Create
         public IActionResult Create()
@@ -235,7 +240,11 @@ namespace CorewoodUniversity.Controllers
             }
 
             var instructor = await _context.Instructors
+                .Include(i => i.OfficeAssignment)
+                .Include(i => i.CourseAssignments)
+                    .ThenInclude(ca => ca.Course)
                 .FirstOrDefaultAsync(m => m.ID == id);
+
             if (instructor == null)
             {
                 return NotFound();
@@ -268,5 +277,6 @@ namespace CorewoodUniversity.Controllers
         {
             return _context.Instructors.Any(e => e.ID == id);
         }
+
     }
 }

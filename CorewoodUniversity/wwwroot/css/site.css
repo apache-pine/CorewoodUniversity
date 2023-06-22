@@ -3,14 +3,16 @@ for details on configuring this project to bundle and minify static web assets. 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap');
 
-/* https://coolors.co/002147-4169e1-f1cd00-c2c2c2-92b4a7 */
+/* https://coolors.co/002147-3053ba-f1cd00-c2c2c2-94cdb7-c3e6cb */
 
 :root {
     --primary-color: #002147;
-    --secondary-color: #4169e1;
+    --secondary-color: #3053BA;
     --accent1-color: #f1cd00;
     --accent2-color: #c2c2c2;
-    --accent3-color: #92b4a7;
+    --accent3-color: #94CDB7;
+    --accent4-color: #c3e6cb;
+
     --heading-font: 'Montserrat', Roboto, Arial, sans-serif;
     --paragraph-font: 'Open Sans', Lato, Helvetica, sans-serif;
 }
@@ -36,6 +38,10 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.nav-link:hover {
+    color: var(--accent1-color) !important;
 }
 
 /* Sticky footer styles
@@ -75,6 +81,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: var(--accent2-color) !important;
 }
 .footer {
   position: absolute;
@@ -90,5 +97,133 @@ a, p, body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
+    margin-top: 2rem;
 }
 
+.white-on-primary {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+.white-on-secondary {
+    color: white !important;
+    background-color: var(--secondary-color) !important;
+}
+
+.black-on-gold {
+    color: black !important;
+    background-color: var(--accent1-color) !important;
+}
+
+.black-on-silver {
+    color: black !important;
+    background-color: var(--accent2-color) !important;
+}
+
+.black-on-cam-blue {
+    color: black !important;
+    background-color: var(--accent3-color) !important;
+}
+
+.btn {
+    background-color: var(--accent1-color);
+    padding: 6px 24px;
+    color: black;
+    margin: .5rem 0 .5rem 0;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.jumbotron {
+    background-color: var(--accent3-color);
+}
+
+.jumbotron h1 {
+    margin: 0;
+}
+
+.home-row {
+    display: flex !important;
+}
+
+.home-col {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.home-col > * {
+    flex: 1 !important;
+}
+
+.home-col .btn {
+    margin-top: auto !important;
+    width: 100%;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+table {
+    border: 2px solid black;
+    background-color: var(--accent3-color);
+}
+
+thead, th {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.form-table {
+    padding: 0;
+}
+
+.form-table td {
+    padding: 0.5rem 1rem;
+}
+
+.special-a {
+    color: var(--accent1-color);
+}
+
+.special-a:hover {
+    color: var(--accent2-color);
+}
+
+.btn-danger {
+    color: white;
+    background-color: red;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-div {
+    border: 5px solid rgba(0,0,0,0.5);
+    max-height: 500px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 490px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.about-table td, th {
+    padding: 1rem;
+}

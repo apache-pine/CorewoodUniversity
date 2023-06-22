@@ -32,12 +32,6 @@
             @Html.DisplayFor(model => model.StartDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RowVersion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RowVersion)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Administrator)
         </dt>
         <dd class = "col-sm-10">
@@ -49,7 +43,7 @@
         <input type="hidden" asp-for="DepartmentID" />
         <input type="hidden" asp-for="RowVersion" />
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-default btn-danger" /> |
             <a asp-action="Index">Back to List</a>
         </div>
     </form>
